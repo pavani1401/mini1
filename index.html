@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+    .hed{
+        height: 40%;
+        margin-bottom: 7%;
+            border-bottom: 2px solid #b3cccc;
+    height: 8%;
+    -webkit-box-shadow: 0 8px 6px -6px #b3cccc;
+    -moz-box-shadow: 0 8px 6px -6px #b3cccc;
+    box-shadow: 0 8px 6px -6px #b3cccc;
+    }
+    body{
+        background-color: #334d4d;
+        background-image: url("back.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100% 150%;
+    }
+    #log{
+	border-radius: 50%;
+	width: 6%;
+	height: 6%;
+	margin-top: 1%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border: 2px solid white;
+}
+ul{
+ 	float:right;
+ 	list-style-type:none;
+    margin-top: 11px;
+ }
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 5px 20px;
+	border: 1px solid whitesmoke;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: ghostwhite;
+	color: black;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+    .wish{
+	margin-left: -470%;
+    color: white;
+}
+    .move{
+        margin-left: -18%;
+    }
+    .two{
+        margin-left: 2%;
+    }
+</style>
+<body>
+<div class="hed">
+    <img id= "log" src="https://www.crushpixel.com/big-static15/preview4/modern-simple-logo-design-brain-2015512.jpg">
+            <ul>
+				<li><h1 class="wish">BEST WISHES</h1></li>
+    			<li class="move"><a href="Signup.html">Signup</a></li>
+    			<li class="two"><a href="Login.html">Login</a></li>
+    		</ul>
+</div>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="first.jpeg" style="width:100%">
+  <img class="mySlides" src="last.jpeg" style="width:100%">
+  <img class="mySlides" src="second.jpeg" style="width:100%">
+  <img class="mySlides" src="third.jpeg" style="width:100%">
+  <img class="mySlides" src="sixth.jpeg" style="width:100%">
+  <img class="mySlides" src="fifth.jpeg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

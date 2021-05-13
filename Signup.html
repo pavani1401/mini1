@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup page</title>
+	<link rel="stylesheet" type="text/css" href="Login.css">
+
+</head>
+<body>
+    <header>
+    	<div class="main">
+    		<div class="logo">
+    			<img id= "log" src="https://www.crushpixel.com/big-static15/preview4/modern-simple-logo-design-brain-2015512.jpg">
+				
+    		</div>
+    		<ul>
+				<li><h1 class="wish">BEST WISHES</h1></li>
+    			<li><a href="#" class="l">signup</a></li>
+    			<li><a href="Login.html" target="_blank" >login</a></li>
+    		</ul>
+    	</div>
+    	<div class="title">
+			<div class="page">
+				<center><h2 class="login">Sign up to GREET WELL</h2> </center>  
+				<div class="container">
+
+						<label>Username : </label>   <br>
+						<input type="text" placeholder="Enter Username" name="username" id="user" required>  <br>
+                        <label> Enter Password : </label>   <br>
+						<input type="password" placeholder="Enter Password" name="password" id="pass" required>
+						<label>Confirm Password : </label>   <br>
+						<input type="password" placeholder="Enter Password" name="password" id="cpass" required>  <br>
+						<button type="submit" onclick="validateForm()">sign up</button>   <br><br>
+						<span class="signup"> Already have an account?</span><a class="signup" href="Login.html" target="_blank">Login</a>
+				</div>
+			</div>
+			<div class="type">
+				<h1>BEST WISHES</h1>
+				<h2>Make ur own greeting cards!!</h2>
+				<h3>And share it to ur loved ones</h3>
+			</div>
+    	</div>
+    </header>
+</body>
+<script type="text/javascript">
+function validateForm() {
+    x = document.getElementById("user").value;
+    y=document.getElementById("pass").value;
+    z=document.getElementById("cpass").value;
+        if (test(x))
+    {
+       if (test1(y))
+     {
+         if(test2(z))
+         {
+            return true;
+         }
+    }}
+    return false;
+}
+function test(x)
+{
+      if (x.length==0) {
+             alert("Userame must be filled out");
+        return false;
+    }
+     return true;
+    }
+function test1(y)
+{
+      if (y.length==0) {
+             alert("Enter the password");
+        return false;
+    }
+     return true;
+     }
+function test2(z)
+{
+      if (z.length==0) {
+             alert("Confirm the password");
+        return false;
+    }
+    else if(y==z)
+    {
+        location.href="congo.html";
+    }
+     return true;
+     }
+</script>
+</html>
